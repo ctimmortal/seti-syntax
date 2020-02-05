@@ -2,6 +2,17 @@
 
 .syntax--source.syntax--python {
 
+  .syntax--name {
+    &.syntax--entity {
+      &.syntax--function {
+        color: @color2;
+      }
+      &.syntax--class {
+        color: @markup-heading;
+      }
+    }
+  }
+
   .syntax--class{
     color: @support;
   }
@@ -18,10 +29,13 @@
   .syntax--storage,
   .syntax--keyword {
     color: @storage;
+    &.syntax--control {
+      color: @color5;
+    }
   }
 
   .syntax--string{
-    color: @string;
+    color: @color3;
     &.syntax--block{
       color: darken(@string, 20%);
       .syntax--keyword {
